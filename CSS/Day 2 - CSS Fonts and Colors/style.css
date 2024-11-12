@@ -1,0 +1,75 @@
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2013/07/12/15/50/ticker-150395_640.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div > p{
+    color: red;
+    font-size: 3rem;
+}
+
+h1{
+    color: #565656;
+    background-color: skyblue;
+    font-size: 50px;
+}
+
+/* rgba(red, green, blue, alpha); */
+h2{
+    color: rgba(113, 180, 107,0.5);
+    font-size: 3em;
+}
+
+/* hsl(hue, saturation, lightness); */
+h3{
+    color: hsl(231, 66%, 48%);
+}
+
+/* ***************CSS units:********************* */
+
+/* Pixels (px): Fixed size */
+p {
+    font-size: 16px; /* Exact, doesn’t scale */
+}
+
+/* Em (em): Relative to parent’s font size */
+div {
+    font-size: 16px; /* 1em here = 16px */
+}
+p {
+    font-size: 1.5em; /* 1.5em = 24px if parent is 16px */
+}
+
+/* Root Em (rem): Relative to root (html) font size */
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+p {
+    font-size: 1.5rem; /* 1.5rem = 24px */
+}
+
+/* Percentage (%): Relative to parent dimensions */
+.container {
+    width: 80%; /* 80% of parent width */
+}
+p {
+    font-size: 120%; /* 120% of parent font size */
+}
+
+/* Viewport Width/Height (vw/vh): Relative to viewport size */
+.hero {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+}
+.box {
+    width: 50vw; /* 50% of viewport width */
+}
+
+/* Min/Max: Set constraints */
+div {
+    font-size: max(16px, 2vw); /* At least 16px, scales up with viewport */
+}
+
+

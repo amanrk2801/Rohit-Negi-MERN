@@ -1,0 +1,31 @@
+h1{
+    /* 10% of view width */
+    font-size: 10vw; 
+    /* 10% of view height */
+    /* font-size: 10vh;  */
+    font-weight: 500;
+    font-style: italic;
+    font-variant: small-caps;
+    background-color: aqua !important;
+}
+
+p{
+    line-height: 30px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    font-stretch: extra-expanded;
+}
+
+/* Cascading refers to the way styles are applied to elements based on their specificity, with more specific styles overriding less specific ones. */
+/* In CSS, styles can be applied from multiple sources, including external stylesheets, internal styles, and inline styles. */
+/* The cascade is the process by which the browser determines which styles to apply to an element based on the specificity of the styles and the order in which they are defined. */
+/* The cascade is an important concept in CSS because it allows developers to write flexible and maintainable code. */
+/* By understanding how the cascade works, developers can write styles that are more efficient, effective, and easier to maintain. */
+/* The cascade is also important for accessibility, as it allows developers to write styles that are more accessible to users with disabilities. */
+/* In summary, cascading is a fundamental concept in CSS that refers to the way styles are applied to elements based on their specificity and the order in which they are defined. */
+/* It is an important concept for developers to understand, as it allows them to write more efficient, effective, and accessible code. */
+
+
+
+

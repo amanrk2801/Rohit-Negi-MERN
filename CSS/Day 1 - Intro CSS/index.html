@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal, and External CSS</title>
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-style {
+            color: purple;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <!-- Linking External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Inline Style -->
+    <h1 draggable="true" style="color: orange;">This is an inline style</h1>
+
+    <!-- Internal Style -->
+    <p class="internal-style">This text uses internal styling.</p>
+
+    <!-- External Style -->
+    <p id="external-style" class="external-style-size">This text uses external styling.</p>
+
+    <h2 contenteditable="true">I am editable</h2>
+
+    <ul id="parent">
+        <li>Child</li>
+        <li>Child</li>
+        <li>Child</li>
+    </ul>
+
+    <ol>
+        <li id="siblings">Brother</li>
+        <li id="siblings">Sister</li>
+        <li id="unknown">Man</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* With box-sizing: border-box, the element’s width and height include padding and border, making layout sizing easier and preventing elements from exceeding their defined size. */
+    box-sizing: border-box;
+}
+
+/* Box Model Demonstration */
+.box {
+    width: 200px;              /* Content width */
+    padding: 20px;             /* Space between content and border */
+    border: 5px solid black;   /* Border surrounding the padding */
+    border-radius: 10px;
+    margin: 15px;              /* Space outside the border */
+    background-color: lightblue; /* Background color of content area */
+}
+
+.box1{
+    width: 200px;              /* Content width */
+    padding: 20px;             /* Space between content and border */
+    border-left: 5px solid black;   /* Border surrounding the padding */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 15px;              /* Space outside the border */
+    background-color: lightblue; /* Background color of content area */
+}
+
+.box:hover{
+    transform: scale(1.2);
+}

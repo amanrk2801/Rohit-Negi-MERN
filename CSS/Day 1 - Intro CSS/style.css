@@ -1,0 +1,50 @@
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+/* Element Selector */
+h1{
+    font-style: italic;
+}
+
+/* Id Selector */
+#external-style{
+    color:bisque;
+}
+
+/* Class Selector */
+.external-style-size{
+    font-size: 30px;
+}
+
+/* Grouping Selector */
+h1,p,#external-style{
+    background-color: rgb(168, 45, 45);
+}
+
+/* Attribute Selector */
+h2[contenteditable="true"]{
+    color:white
+}
+
+/* Descendent Selector */
+ul li{
+    background-color: aquamarine;
+    color:black
+}
+
+#siblings{
+    color:green
+}
+
+/* Child Selector*/
+ol>li#unknown{
+    color: red;
+}
+
