@@ -25,7 +25,8 @@
     <ul>
       <li>Order</li>
       <li>
-        Specificity (ID > Attribute > Class > Child and descendent > Element and group Element)
+        Specificity (ID > Attribute > Class > Child and descendent > Element and
+        group Element)
         <ul>
           <li>ID</li>
           <li>Attribute</li>
@@ -45,6 +46,13 @@
 
       <!-- background-color: aqua !important; -->
       <li>Important</li>
+
+      <!-- Cascading Rules -->
+      <p>This is a <span class="highlight">highlighted</span> paragraph.</p>
+      <p id="important">This is an important paragraph.</p>
+      <p class="highlight override">
+        This paragraph has an override class with !important.
+      </p>
     </ul>
   </body>
 </html>

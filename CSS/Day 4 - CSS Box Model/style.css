@@ -28,3 +28,27 @@ body{
 .box:hover{
     transform: scale(1.2);
 }
+
+/******** Container for layout ***********/
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+  }
+
+  /* Box Model Example */
+  .box-model {
+    width: 200px;
+    padding: 20px;       /* Inner spacing between content and border */
+    border: 5px solid #4caf50; /* Border around the element */
+    margin: 20px;        /* Outer spacing around the box */
+    background-color: #e8f5e9;
+    color: #333;
+  }
+
+  /* Visualization of content, padding, border, and margin */
+  .content {
+    background-color: #c8e6c9;
+  }

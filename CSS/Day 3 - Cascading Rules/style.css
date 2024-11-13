@@ -26,6 +26,29 @@ p{
 /* In summary, cascading is a fundamental concept in CSS that refers to the way styles are applied to elements based on their specificity and the order in which they are defined. */
 /* It is an important concept for developers to understand, as it allows them to write more efficient, effective, and accessible code. */
 
+/* Base style */
+p {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    color: black;
+  }
+
+  /* Class selector - higher specificity */
+  .highlight {
+    color: green;
+    font-weight: bold;
+  }
+
+  /* ID selector - even higher specificity */
+  #important {
+    color: blue;
+  }
+
+  /* Using !important to override all rules */
+  .override {
+    color: red !important;
+  }
+
 
 
 

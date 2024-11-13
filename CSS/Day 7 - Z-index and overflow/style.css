@@ -1,0 +1,79 @@
+/* 1. Z-index */
+.z-index-example {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 0, 0, 0.6);
+    z-index: 10; /* Higher stacking order */
+}
+
+.z-index-example-2 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 255, 0, 0.6);
+    z-index: 5; /* Lower stacking order */
+}
+
+/* 2. Overflow */
+.overflow-example {
+    width: 300px;
+    height: 100px;
+    border: 2px solid black;
+
+    /* overflow: visible; default */
+    /* overflow: hidden; */
+    /* overflow: scroll */
+    overflow: auto; /* Scroll if content exceeds*/
+}
+.overflow-content {
+    width: 400px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+/* 3. Flow and Clear */
+.float-left {
+    float: left;
+    width: 45%;
+    margin-right: 10px;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.float-right {
+    float: right;
+    width: 45%;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.clear-both {
+    clear: both;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+/* 4. CSS on Text */
+.text-align-example {
+    text-align: center;
+    background-color: lightyellow;
+    padding: 10px;
+}
+
+.text-align-last-example {
+    text-align-last: justify;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.text-direction-example {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    background-color: lightpink;
+    padding: 10px;
+}

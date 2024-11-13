@@ -1,0 +1,128 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Box Model */
+.box-model {
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #333;
+    background-color: #e0e0e0;
+}
+
+/* Colors */
+.color-example {
+    width: 200px;
+    height: 50px;
+    background-color: #3498db;
+    margin: 10px 0;
+}
+
+.text-color-example {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.gradient-example {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(45deg, #f39c12, #8e44ad);
+    margin: 10px 0;
+}
+
+/* Typography */
+.font-example {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* Layouts */
+.flexbox-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 20px;
+    background-color: #8e44ad;
+    color: white;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.grid-item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Transitions & Transformations */
+.transition-example {
+    width: 200px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.3s;
+    margin: 10px 0;
+}
+
+.transition-example:hover {
+    background-color: #2ecc71;
+}
+
+.transform-example {
+    width: 200px;
+    height: 50px;
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+.transform-example:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Animation */
+@keyframes example-animation {
+    0% { background-color: #3498db; }
+    50% { background-color: #e74c3c; }
+    100% { background-color: #3498db; }
+}
+
+.animation-example {
+    width: 200px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    animation: example-animation 2s infinite;
+    margin: 10px 0;
+}
