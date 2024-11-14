@@ -1,100 +1,48 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.baseline{
+/* General Flex Container */
+.flex-container {
     display: flex;
-    align-items: baseline;
+    flex-direction: row; /* Main axis is horizontal */
+    justify-content: space-around; /* Spaces items evenly around the main axis */
+    align-items: center; /* Centers items along the cross-axis */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    align-content: space-between; /* Controls the spacing between rows on the cross-axis */
+    height: 300px; /* Height for demonstration */
+    border: 2px solid #333;
     margin: 20px;
+    padding: 10px;
 }
 
-/* Flex Container Styling */
-.card-container {
-    display: flex; /* Enables Flexbox */
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    /* align-content: center; */
-    /* flex-direction: column-reverse; */
-    /* align-items: end; */
-    justify-content: space-between; /* Distributes items with equal space between */
-    gap: 20px; /* Space between the flex items */
-}
-
-
-/* Flex Item Styling */
-.card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Default width for each card */
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-}
-
-.card img {
-    width: 100%; /* Make the image take up the full width of the card */
-    height: 150px;
-    object-fit: cover;
-}
-
-.card-info {
-    padding: 15px;
-}
-
-.card-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.card-info p {
-    color: #777;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.card-info button {
-    background-color: #3498db;
+/* Individual Flex Items */
+.flex-item {
+    background-color: lightcoral;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex-basis: 100px; /* Sets the initial size for each item */
+    flex-grow: 1; /* Allows items to grow if space is available */
+    flex-shrink: 1; /* Allows items to shrink if space is limited */
 }
 
-.card-info button:hover {
-    background-color: #2980b9;
+/* Specific Item Adjustments */
+.flex-item:nth-child(1) {
+    order: 3; /* Changes display order of the item */
 }
 
-/* Responsive Design: Adjusting the layout for smaller screens */
-@media (max-width: 768px) {
-    .card-container {
-        justify-content: center;
-    }
-
-    .card {
-        width: 45%; /* On smaller screens, make the cards take up less width */
-    }
+.flex-item:nth-child(2) {
+    align-self: flex-end; /* Aligns this item to the end of the cross-axis */
 }
 
-@media (max-width: 480px) {
-    .card {
-        width: 100%; /* On very small screens, cards will take up full width */
-    }
+.flex-item:nth-child(3) {
+    flex-grow: 2; /* Allows this item to grow more than the others */
+}
+
+.flex-item:nth-child(4) {
+    flex-shrink: 0; /* Prevents this item from shrinking */
+}
+
+.flex-item:nth-child(5) {
+    flex-basis: 150px; /* Sets a different initial size for this item */
 }
 
 

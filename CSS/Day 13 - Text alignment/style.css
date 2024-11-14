@@ -1,0 +1,58 @@
+/* Text Alignment and Direction */
+.aligned-text {
+    text-align: center; /* Aligns text to the center */
+    direction: rtl; /* Sets text direction to right-to-left */
+    unicode-bidi: bidi-override; /* Forces text to obey the defined direction */
+    text-align-last: right; /* Aligns the last line of text to the right */
+    vertical-align: sub; /* Aligns the text lower than the baseline */
+}
+
+/* Text Decoration */
+.decorated-text {
+    text-decoration-line: underline overline; /* Adds an underline and overline */
+    text-decoration-color: red; /* Sets decoration color to red */
+    text-decoration-style: wavy; /* Wavy style for text decoration */
+    text-decoration-thickness: 2px; /* Sets the thickness of the decoration */
+}
+
+/* Text Transformation */
+.transformed-text {
+    text-transform: capitalize; /* Transforms text to capitalize each word */
+}
+
+/* Text Spacing */
+.spaced-text {
+    text-indent: 20px; /* Adds indentation to the start of the text */
+    letter-spacing: 2px; /* Increases space between letters */
+    line-height: 1.5; /* Sets space between lines */
+    word-spacing: 4px; /* Sets space between words */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Text Shadow */
+.shadowed-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text */
+}
+
+/* Box Shadow */
+.transition-box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    box-shadow: inset 4px 4px 8px 2px rgba(0, 0, 0, 0.5); /* Box shadow properties */
+    transition: background-color 1s ease-in-out, transform 0.5s ease; /* Applies transition on hover */
+}
+
+.transition-box:hover {
+    background-color: lightcoral; /* Changes color on hover */
+    transform: scale(1.1); /* Scales up on hover */
+}
+
+/* shadow */
+/* 
+box-shadow: -10px -20px; horizontal and vertical
+box-shadow: -10px -20px red; color is added
+box-shadow: -10px -20px 5px red; blur is added 
+box-shadow: -10px -20px 5px 10px red; blur radius 10px is added
+box-shadow: inset -10px -20px 5px 10px red; inset shadow inside is added
+*/

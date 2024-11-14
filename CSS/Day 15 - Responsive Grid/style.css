@@ -1,0 +1,170 @@
+/* Basic Styling for the Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Start with 1 column */
+    gap: 10px; /* Space between grid items */
+    padding: 10px;
+    grid-template-rows: auto;
+}
+
+/* Style for Grid Items */
+.grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Breakpoint: Medium screens (Tablets) */
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Responsive Breakpoint: Large screens (Desktops) */
+@media (min-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+/* Optional: Adding more styles for larger screens */
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for very large screens */
+    }
+}
+
+/* Layout 2 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+.container{
+    background-color: lavender;
+    height: 100%;
+    padding: 4rem;
+    display: grid;
+    gap: 1rem;
+
+    /* grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: repeat(3,1fr); */
+
+    /* one way with media query */
+    grid-template-columns: repeat(1, 1fr);  /* 1 column for small screens */
+    
+    /* second way to do same layout refer (line no. 133) */
+    /* grid-template-areas: 
+    "box1 box2 box2 box3"
+    "box1 box4 box5 box6"
+    "box1 box7 box8 box6" */
+}
+
+.box{
+    background: skyblue;
+    font-size: 2rem;
+}
+
+/* One way */
+/* .box1{
+    grid-row: 1/4;
+    background: green;
+}
+
+.box2{
+    background: green;
+    grid-column: 2/4;
+}
+
+.box3, .box5, .box7{
+    background: red;
+}
+
+.box4, .box8{
+    background: yellow;
+}
+
+.box6{
+    background: green;
+    grid-row: 2/4;
+    grid-column: 4/5;
+
+} */
+
+/* Mobile: Stack everything into one column */
+@media (min-width: 500px) {
+    .container {
+        background: tomato;
+        display: grid;
+        grid-template-columns: repeat(4,1fr); 
+        grid-template-rows: repeat(3,1fr);
+    }
+    
+    .box {
+        grid-column: auto;
+    }
+    
+    /* Optional: You can set specific rules for individual boxes if needed */
+    .box1{
+        grid-row: 1/4;
+        background: green;
+    }
+
+    .box2{
+        background: green;
+        grid-column: 2/4;
+    }
+
+    .box3, .box5, .box7{
+        background: red;
+    }
+
+    .box4, .box8{
+        background: yellow;
+    }
+
+    .box6{
+        background: green;
+        grid-row: 2/4;
+        grid-column: 4/5;
+    }
+}
+
+/* Second way - Grid template areas */
+/* .box1{
+    grid-area: box1;
+}
+
+.box2{
+    grid-area: box2;
+}
+
+.box3{
+    grid-area: box3;
+}
+
+.box4{
+    grid-area: box4;
+}
+
+.box5{
+    grid-area: box5;
+}
+
+.box6{
+    grid-area: box6;
+}
+
+.box7{
+    grid-area: box7;
+}
+
+.box8{
+    grid-area: box8;
+} */
+

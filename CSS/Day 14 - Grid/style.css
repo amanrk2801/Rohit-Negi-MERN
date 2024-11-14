@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout 1 */
+.container1{
+    padding: 5rem;
+    height: 100vh;
+    width: 100vw;
+    background: tomato;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 1rem;
+    /* row-gap: 1rem; */
+}
+
+.box{
+    background: orange;
+    border: 0.5rem solid black;
+} 
+
+.box1,.box6{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1/4;
+}
+
+.box2{
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-row: 2/4;
+}
+
+.box3{
+    grid-column: 2/4;
+}
+
+/* Layout 2 - Chess board */
+.chessboard{
+    width: 100vw;
+    height: 100vw;
+    background-color: brown;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.white{
+    background-color: white;
+}
+
+.black{
+    background-color: black;
+}
+
+/* Layout 3 */
+/* Container Setup */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Defines a 3-column layout */
+    grid-template-rows: auto 1fr auto; /* Defines 3 rows: Header, Main Content, Footer */
+    gap: 10px; /* Adds 10px space between grid items */
+    height: 100vh;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Grid Areas */
+.header {
+    grid-area: header; /* Assigns this element to the header area */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    grid-area: nav; /* Assigns this element to the nav area */
+    background-color: #FFD700;
+    padding: 20px;
+    color: #333;
+}
+
+.main {
+    grid-area: main; /* Assigns this element to the main area */
+    background-color: white;
+    padding: 20px;
+    color: #333;
+}
+
+.aside {
+    grid-area: aside; /* Assigns this element to the aside area */
+    background-color: #FF69B4;
+    padding: 20px;
+    color: white;
+}
+
+.footer {
+    grid-area: footer; /* Assigns this element to the footer area */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Define Grid Template Areas */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+}

@@ -1,0 +1,137 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Individual Animation Styles */
+
+/* 1. Scale Animation */
+.scale-animation {
+    background-color: #ff5733;
+    animation: scaleUp 3s infinite alternate;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* 2. Rotate Animation */
+.rotate-animation {
+    background-color: #33c1ff;
+    animation: rotate 4s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 3. Fade Animation */
+.fade-animation {
+    background-color: #ff33a6;
+    animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* 4. Slide Animation */
+.slide-animation {
+    background-color: #85ff33;
+    animation: slideIn 3s infinite alternate;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 5. Bounce Animation */
+.bounce-animation {
+    background-color: #ffa533;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 6. Color Change Animation */
+.color-change-animation {
+    background-color: #8033ff;
+    animation: colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        background-color: #8033ff;
+    }
+    to {
+        background-color: #ff3380;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+    .box {
+        font-size: 1rem;
+        height: 100px;
+    }
+}

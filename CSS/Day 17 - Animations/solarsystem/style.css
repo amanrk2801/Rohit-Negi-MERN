@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes stars {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+}
+
+.orbit {
+    height: 100px;
+    width: 100px;
+    animation: orbit 5s linear infinite;
+    position: relative;
+    border: 1px dashed orange; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 0 0 15px yellow, 0 0 30px yellow, 0 0 45px yellow; /* Glowing effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 10s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px yellow, 0 0 30px yellow, 0 0 45px yellow;
+    }
+    50% {
+        box-shadow: 0 0 25px yellow, 0 0 50px yellow, 0 0 75px yellow;
+    }
+    100% {
+        box-shadow: 0 0 15px yellow, 0 0 30px yellow, 0 0 45px yellow;
+    }
+}
+
+.mercury {
+    background-color: #B2B2B2;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    position: absolute;
+    animation: mercury 8.8s linear infinite;
+}
+
+@keyframes mercury {
+    from {
+        transform: rotate(0deg) translate(80px);
+    }
+    to {
+        transform: rotate(360deg) translate(80px);
+    }
+}
+
+.venus {
+    width: 12px;
+    height: 12px;
+    background: #EEDC82;
+    border-radius: 50%;
+    position: absolute;
+    animation: venus 22.5s linear infinite;
+}
+
+@keyframes venus {
+    from {
+        transform: rotate(0deg) translate(100px);
+    }
+    to {
+        transform: rotate(360deg) translate(100px);
+    }
+}
+
+.earth {
+    width: 14px;
+    height: 14px;
+    background: #1E90FF;
+    border-radius: 50%;
+    position: absolute;
+    animation: earth 36.5s linear infinite;
+}
+
+@keyframes earth {
+    from {
+        transform: rotate(0deg) translate(120px);
+    }
+    to {
+        transform: rotate(360deg) translate(120px);
+    }
+}
+
+.mars {
+    width: 10px;
+    height: 10px;
+    background: #FF4500;
+    border-radius: 50%;
+    position: absolute;
+    animation: mars 68.7s linear infinite;
+}
+
+@keyframes mars {
+    from {
+        transform: rotate(0deg) translate(140px);
+    }
+    to {
+        transform: rotate(360deg) translate(140px);
+    }
+}
+
+.jupiter {
+    width: 25px;
+    height: 25px;
+    background: #D2B48C;
+    border-radius: 50%;
+    position: absolute;
+    animation: jupiter 433.3s linear infinite;
+}
+
+@keyframes jupiter {
+    from {
+        transform: rotate(0deg) translate(160px);
+    }
+    to {
+        transform: rotate(360deg) translate(160px);
+    }
+}
+
+.saturn {
+    width: 22px;
+    height: 22px;
+    background: #F4A460;
+    box-shadow: 0 0 0 6px #C2B280; /* Saturn's ring effect */
+    border-radius: 50%;
+    position: absolute;
+    animation: saturn 1075.9s linear infinite;
+}
+
+@keyframes saturn {
+    from {
+        transform: rotate(0deg) translate(180px);
+    }
+    to {
+        transform: rotate(360deg) translate(180px);
+    }
+}
+
+.uranus {
+    width: 20px;
+    height: 20px;
+    background: #AFEEEE;
+    border-radius: 50%;
+    position: absolute;
+    animation: uranus 3068.7s linear infinite;
+}
+
+@keyframes uranus {
+    from {
+        transform: rotate(0deg) translate(200px);
+    }
+    to {
+        transform: rotate(360deg) translate(200px);
+    }
+}
+
+.neptune {
+    width: 20px;
+    height: 20px;
+    background: #4169E1;
+    border-radius: 50%;
+    position: absolute;
+    animation: neptune 6019s linear infinite;
+}
+
+@keyframes neptune {
+    from {
+        transform: rotate(0deg) translate(220px);
+    }
+    to {
+        transform: rotate(360deg) translate(220px);
+    }
+}
+
+.pluto {
+    width: 8px;
+    height: 8px;
+    background: #D3D3D3;
+    border-radius: 50%;
+    position: absolute;
+    animation: pluto 9056s linear infinite;
+}
+
+@keyframes pluto {
+    from {
+        transform: rotate(0deg) translate(240px);
+    }
+    to {
+        transform: rotate(360deg) translate(240px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.info {
+    background: #000;
+    color: wheat;
+    padding: 10px;
+    position: absolute;
+}

@@ -1,0 +1,68 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem; /* Reduced padding for better responsiveness */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container Styling */
+.container {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Box Styling */
+.Box {
+    background-color: orange;
+    font-size: 2rem;
+    border: 5px solid black;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+/* Transformations */
+.Box1:hover { transform: rotateX(60deg); }
+.Box2:hover { transform: rotateY(60deg); }
+.Box3:hover { transform: rotateZ(-50deg); }
+.Box4:hover { transform: translateX(-200px); }
+.Box5:hover { transform: translateY(200px); }
+.Box6:hover { transform: perspective(300px) translateZ(200px); }
+.Box7:hover { transform: scaleX(0.5); }
+.Box8:hover { transform: scaleY(2); }
+.Box9:hover { transform: perspective(300px) rotateY(45deg) scale(1.5); }
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 column for mobile devices */
+    }
+    .Box {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+}
