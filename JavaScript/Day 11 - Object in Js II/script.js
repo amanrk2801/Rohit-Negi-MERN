@@ -118,7 +118,8 @@ let dog = {
     }
 }
 
-dog.__proto__ = animal;
+dog.__proto__ = animal; // Prototype chaining -> costlier operation
+// dog = Object.create(animal); // this is the better way to do prototype chaining
 
 dog.eat(); // Eating...
 dog.bark(); // Barking...
