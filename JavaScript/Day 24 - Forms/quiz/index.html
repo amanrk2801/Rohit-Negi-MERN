@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+<h1>General Knowledge Quiz</h1>
+<form action="/submitQuiz" method="post">
+    <div>
+        <p>Question 1: What is the capital of France?</p>
+        <input type="radio" id="paris" name="q1" value="Paris">
+        <label for="paris">Paris</label><br>
+        <input type="radio" id="berlin" name="q1" value="Berlin">
+        <label for="berlin">Berlin</label><br>
+        <input type="radio" id="rome" name="q1" value="Rome">
+        <label for="rome">Rome</label><br>
+        <input type="radio" id="london" name="q1" value="London">
+        <label for="london">London</label>
+    </div>
+    <div>
+        <p>Question 2: Who is the CEO of SpaceX?</p>
+        <input type="radio" id="elon" name="q2" value="Elon Musk">
+        <label for="elon">Elon Musk</label><br>
+        <input type="radio" id="jeff" name="q2" value="Jeff Bezos">
+        <label for="jeff">Jeff Bezos</label><br>
+        <input type="radio" id="mark" name="q2" value="Mark Zuckerberg">
+        <label for="mark">Mark Zuckerberg</label><br>
+        <input type="radio" id="tim" name="q2" value="Tim Cook">
+        <label for="tim">Tim Cook</label>
+    </div>
+    <div>
+        <p>Question 3: What is the largest planet in our solar system?</p>
+        <input type="radio" id="earth" name="q3" value="Earth">
+        <label for="earth">Earth</label><br>
+        <input type="radio" id="saturn" name="q3" value="Saturn">
+        <label for="saturn">Saturn</label><br>
+        <input type="radio" id="jupiter" name="q3" value="Jupiter">
+        <label for="jupiter">Jupiter</label><br>
+        <input type="radio" id="uranus" name="q3" value="Uranus">
+        <label for="uranus">Uranus</label>
+    </div>
+    <div>
+        <p>Question 4: Who painted the Mona Lisa?</p>
+        <input type="radio" id="leonardo" name="q4" value="Leonardo da Vinci">
+        <label for="leonardo">Leonardo da Vinci</label><br>
+        <input type="radio" id="raphael" name="q4" value="Raphael">
+        <label for="raphael">Raphael</label><br>
+        <input type="radio" id="michelangelo" name="q4" value="Michelangelo">
+        <label for="michelangelo">Michelangelo</label><br>
+        <input type="radio" id="caravaggio" name="q4" value="Caravaggio">
+        <label for="caravaggio">Caravaggio</label>
+    </div>
+    <input type="submit" value="Submit Quiz">
+</form>
+<script src="script.js"></script>
+</body>
+</html>
