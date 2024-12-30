@@ -101,9 +101,19 @@ const quizQuestionsBank = [
   }
 ];
 
+// sort -> O(nlogn)
+// function getRandomQuestions(questions, count) {
+//     const shuffled = questions.sort(() => 0.5 - Math.random());
+//     return shuffled.slice(0, count);
+// }
+
+// Fisher-Yates shuffle algorithm : sort -> O(n)
 function getRandomQuestions(questions, count) {
-    const shuffled = questions.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+  return questions.slice(0, count);
 }
 
 const form = document.querySelector("#quizForm");
@@ -140,3 +150,6 @@ document.querySelector("#submit").addEventListener("click", () => {
     });
     resultDiv.innerHTML = `You scored ${score} out of ${randomQuestions.length}`;
 });
+
+
+
