@@ -43,6 +43,10 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system.
    ```bash
    tsc filename.ts
    ```
+   - ES2016
+   ```bash
+   tsc filename.ts --target es2016
+   ```
    This generates a `filename.js` file.
 
 ---

@@ -21,3 +21,4 @@ const ho = 17;
 // Interprted language
 // JIT: Just in time
 let x = 20;
+// x = "rohit"; // error

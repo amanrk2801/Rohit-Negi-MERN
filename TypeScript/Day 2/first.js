@@ -47,3 +47,6 @@ let obj3 = {
     position: "manager",
     id: 210
 };
+// Interface vs Type
+// Function
+// Classes

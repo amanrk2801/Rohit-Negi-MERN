@@ -30,4 +30,4 @@ const ho:number = 17;
 // JIT: Just in time
 
 let x = 20;
-x = "rohit";
+// x = "rohit"; // error
