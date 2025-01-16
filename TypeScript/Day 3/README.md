@@ -1,6 +1,3 @@
-Here is the organized version of your `readme.md`:
-
-```markdown
 # TypeScript Guide
 
 ## Installation
@@ -272,5 +269,3 @@ interface Person<T> {
 ### Multiple Generics
 You can use multiple generics in functions or interfaces.
 ```
-
-This format should provide better structure for understanding TypeScript concepts. Let me know if you need any further modifications!
