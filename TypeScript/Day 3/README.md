@@ -1,260 +1,256 @@
-<!-- Age example: 30 == Thirty -->
-<!-- Number calculation result -->
-<!-- Accessing property of an object -->
+Here is the organized version of your `readme.md`:
 
+```markdown
+# TypeScript Guide
 
-<!-- First we need to install Typescript compiler -->
-1: npm install -g typescript
-2: tsc --version
+## Installation
 
-<!-- How to run TS file -->
-tsc file_name
-tsc yourfile.ts --target es2016
+1. Install TypeScript compiler globally:
+   ```bash
+   npm install -g typescript
+   ```
 
-<!-- Intialize config file -->
-tsc --init
+2. Check TypeScript version:
+   ```bash
+   tsc --version
+   ```
 
-<!-- run tsc -->
+3. Compile a TypeScript file:
+   ```bash
+   tsc file_name
+   ```
 
-<!-- Every JS file will be valid TS -->
-<!-- If there is an error in TS, still it will compile it and convert it into JS file -->
-<!-- It will be on the user how to tackle it -->
+4. Compile with a specific target:
+   ```bash
+   tsc yourfile.ts --target es2016
+   ```
 
+5. Initialize the config file:
+   ```bash
+   tsc --init
+   ```
 
-<!-- watch mode -->
-tsc --watch
+6. Running TypeScript Compiler:
+   - Compile and watch mode:
+     ```bash
+     tsc --watch
+     ```
 
-<!-- How to quit it -->
-ctrl+C
+7. To quit watch mode:
+   - Press `ctrl + C`
 
+## Data Types
 
-<!-- How to deal with number -->
-let age:number = 30;
+### Primitives
 
-<!-- How to deal with string -->
-let name: string = "Alice";
+1. **Number**
+   ```typescript
+   let age: number = 30;
+   ```
 
-<!-- How to deal with bigint -->
-let largeNumber: bigint = 123456789012345678901234567890n;
+2. **String**
+   ```typescript
+   let name: string = "Alice";
+   ```
 
-<!-- How to deal with boolean -->
-let isActive: boolean = true;
+3. **BigInt**
+   ```typescript
+   let largeNumber: bigint = 123456789012345678901234567890n;
+   ```
 
-<!-- How to deal with undefined -->
-let value: undefined;
+4. **Boolean**
+   ```typescript
+   let isActive: boolean = true;
+   ```
 
-<!-- How to deal with null -->
-let value: null = null;
+5. **Undefined**
+   ```typescript
+   let value: undefined;
+   ```
 
+6. **Null**
+   ```typescript
+   let value: null = null;
+   ```
 
-<!-- Type Inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine the type of a variable based on the value assigned to it. This means that even if you don't explicitly specify a type, TypeScript can infer the most appropriate type and apply it. -->
+### Type Inference
+TypeScript automatically infers types based on the assigned value.
 
+```typescript
 let age = 25;  // TypeScript infers that age is of type 'number'
 let name = "Alice";  // TypeScript infers that name is of type 'string'
+```
 
+### Explicit Type Annotations
+When we explicitly define the type.
 
-<!--  Explicit Type Annotations -->
-when we assigned type by our own
+### Limitations of Type Inference
+- `any`: If we don't initialize the value initially.
 
-<!-- Limitations of Type Inference -->
-any: if we don't initilize the value initially
+```typescript
+let value: any = 42; // Represents any type of value.
+```
 
-<!-- any -->
-let value: any = 42;
-Represents any type of value. When a variable has the any type, it can be assigned any value, and no type checking is done.
+- `unknown`: Safer than `any`, as it requires type narrowing before usage.
 
+```typescript
+let value: unknown;
+```
 
-<!-- unknown -->
-The any and unknown types in TypeScript are both used to represent values of any type.
+## Non-Primitive Data Types
 
-The unknown type is safer than any because you cannot perform operations on an unknown value without first narrowing its type through type checks.
+### 1. Array
+```typescript
+let numbers: number[] = [2, 3, 4, 6];
+let mixedNumbers: (string | number)[] = [2, 3, 4, 5, 6, "Mohit"];
+```
 
+### 2. Tuples
+Fixed-length arrays with specific types.
 
-<!-- Non Primitive Data type -->
+```typescript
+let tuple: [string, number] = ["Rohit", 10];
+```
 
-<!-- 1: Array -->
-let numbers: number[] = [2,3,4,6];
-let numbers:(string | number)[] = [2,3,4,5,6,"Mohit"];
+## Compile-time vs Runtime
 
-<!-- 2: Tuples -->
-Tuples are arrays with a fixed number of elements of specific types.
+### Compile-time
+- The phase when source code is translated into machine code.
+- Errors detected during this phase are compile-time errors (e.g., syntax errors, type mismatches).
 
-let tuple: [string, number] = ["Rohit",10];
+### Runtime
+- The phase when the program is executed.
+- Errors detected during this phase are runtime errors (e.g., dividing by zero, accessing undefined variables).
 
+## Objects
 
-
-
-<!--  Compile-time refers to the phase when the source code is translated into machine code or an intermediate format (e.g., bytecode). This is done by a compiler. -->
-
-
-Errors detected at this phase are called compile-time errors.
-Examples of compile-time errors include:
-Syntax errors (e.g., missing semicolons).
-Type mismatches (e.g., assigning a string to a variable declared as a number in TypeScript).
-Variable declarations without initialization (if required by the language).
-
-
-
-<!-- Runtime refers to the phase when the program is executed after it has been compiled (or interpreted). -->
-
-<!-- Errors detected during this phase are called runtime errors.
-Examples of runtime errors include:
-Dividing by zero.
-Accessing undefined variables or null references.
-Running out of memory.
-Examples of Runtime Activities:
-
-Executing code instructions.
-Handling user inputs.
-Interacting with APIs or databases -->
-
-
-
-
-<!--  Objects -->
-
-let person: { name: string; age: number; isStudent: boolean };
-
-person = {
-    name: "rohit",
-    age:23,
-    isStudent: true
-}
-
-
-<!-- Inline -->
-let account: {name:string, balance:number, age?:number} = {
-    name:"Rohit",
-    balance:420
+### Inline Object Declaration
+```typescript
+let account: { name: string, balance: number, age?: number } = {
+    name: "Rohit",
+    balance: 420
 };
+```
 
-<!-- Using Type Alises -->
-
+### Using Type Aliases
+```typescript
 type student = {
    names: string,
    age: number
 };
 
 let College_student: student = {
-    names:"Rohit",
+    names: "Rohit",
     age: 20
 };
+```
 
-
-<!-- using interface -->
-
-
+### Using Interfaces
+```typescript
 interface customer {
-    name : string,
+    name: string,
     account_number: number,
     balance: number,
-    age: number 
+    age: number
 }
 
 let per: customer = {
     name: "Rohit",
-    account_number:230921,
-    balance:420,
+    account_number: 230921,
+    balance: 420,
     age: 12
-}
+};
+```
 
-<!-- extend with interface -->
+### Extending with Interface
+You can extend types using intersections.
 
-<!-- type uses intersections (&) to combine multiple types. -->
+```typescript
+type animal = gen & { ... };
+```
 
-type animal = gen & {
+### Declaration Merging
+Interfaces support declaration merging, but types do not.
 
-}
-
-
-<!--  Declaration Merging -->
+```typescript
 interface person {
-    name: string
+    name: string;
 }
 
 interface person {
-    age: number
+    age: number;
 }
+```
 
-<!-- Above syntax is allowed -->
+## Optional Parameters
+- Use the `?` symbol to make parameters optional.
 
-But with type it is not allowed
-
-<!-- ? optional keyword
- -->
-
-
-<!-- Nested Objects -->
-
-
-<!-- Utility Types for Objects -->
-1: Partial<Person>
-2: Required<Person>
-3: Readonly<Person>
-
-<!-- Array of Objects -->
-
-
-<!-- Function in JS -->
-
-
-function greet(name: string): string {
-    return `Hello, ${name}!`;
+```typescript
+function meet(name?: string): void {
+    console.log(`Hello ${name || "Guest"}`);
 }
+```
 
-<!-- Optional Parameters ?-->
-function meet(name?:string):void{
-    console.log(`Hello ${name||"Guest"}`);
+## Function Parameters and Types
+
+### Default Parameters
+You can set default values for function parameters.
+
+### Arrow Function
+```typescript
+const multiply = (a: number, b: number): number => a * b;
+```
+
+### Rest Parameters
+```typescript
+function sum(...numbers: number[]): number {
+    return numbers.reduce((acc, num) => acc + num, 0);
 }
+```
 
-<!-- Default parameter -->
+### Callback Functions
+```typescript
+type chill = (a: number) => void;
+```
 
-<!-- Arrow function: Multiply -->
+## Classes in TypeScript
 
-<!-- Rest Parameter -->
+### Class Definition
+```typescript
+class Bank {
+    name: string;
+    age: number;
+    account: number;
 
-<!-- CallBack Function -->
-
-type chill = (a:number) => void;
-
-
-<!-- classes in TS -->
-class Bank{
-    name:string;
-    age:number;
-    account:number;
-
-    constructor(name:string,age:number,account:number){
+    constructor(name: string, age: number, account: number) {
         this.name = name;
         this.age = age;
         this.account = account;
     }
 
-    greet():void {
+    greet(): void {
         console.log(`Hello ${this.name}`);
     }
 }
 
-const B1 = new Bank("Rohit",20,102);
+const B1 = new Bank("Rohit", 20, 102);
+```
 
+### Access Modifiers
 
+- `public`: Default, accessible everywhere.
+- `private`: Accessible only within the class.
+- `protected`: Accessible within the class and its subclasses.
 
+### Inheritance
+- Use the `super` keyword to call the constructor or methods of the parent class.
 
-<!-- public: Default; accessible everywhere.
-private: Accessible only within the class.
-protected: Accessible within the class and its subclasses. -->
+## Generics
 
-<!-- Inheritance -->
+Generics allow creating flexible, reusable components.
 
-<!-- super keyword is used to call the constructor of parent -->
-<!-- super.mehtod() is used to call parent class method also from child class -->
-
-
-
-<!-- Generics -->
-Generics in TypeScript allow you to create flexible, reusable components by enabling you to specify types as parameters in functions, classes, interfaces, and other constructs. This helps provide type safety while keeping the flexibility to work with various data types.
-
-
+### Generic Function
+```typescript
 function identity<T>(value: T): T {
   return value;
 }
@@ -262,19 +258,19 @@ function identity<T>(value: T): T {
 console.log(identity(5));           // Works with numbers
 console.log(identity("Hello"));     // Works with strings
 console.log(identity([1, 2, 3]));   // Works with arrays
+```
 
-
-
-<!-- Generic Interfaces -->
-
+### Generic Interfaces
+```typescript
 interface Person<T> {
-    name:string,
-    age:number,
-    id:T
-};
+    name: string;
+    age: number;
+    id: T;
+}
+```
 
-<!-- You can use multiple generics also -->
+### Multiple Generics
+You can use multiple generics in functions or interfaces.
+```
 
-
-
-
+This format should provide better structure for understanding TypeScript concepts. Let me know if you need any further modifications!

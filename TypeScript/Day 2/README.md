@@ -1,215 +1,234 @@
-<!-- Age example: 30 == Thirty -->
-<!-- Number calculation result -->
-<!-- Accessing property of an object -->
+# TypeScript Basics
 
+## Installation
 
-<!-- First we need to install Typescript compiler -->
-1: npm install -g typescript
-2: tsc --version
+### Install TypeScript Compiler
+```bash
+npm install -g typescript
+tsc --version
+```
 
-<!-- How to run TS file -->
+### Initialize Config File
+```bash
+tsc --init
+```
+
+## Running TypeScript Files
+```bash
 tsc file_name
 tsc yourfile.ts --target es2016
+```
 
-<!-- Intialize config file -->
-tsc --init
-
-<!-- run tsc -->
-
-<!-- Every JS file will be valid TS -->
-<!-- If there is an error in TS, still it will compile it and convert it into JS file -->
-<!-- It will be on the user how to tackle it -->
-
-
-<!-- watch mode -->
+### Watch Mode
+```bash
 tsc --watch
+```
 
-<!-- How to quit it -->
-ctrl+C
+#### Quit Watch Mode
+Press `Ctrl+C`
 
+## TypeScript Features
 
-<!-- How to deal with number -->
-let age:number = 30;
+### Handling Primitive Types
 
-<!-- How to deal with string -->
+#### Number
+```typescript
+let age: number = 30;
+```
+
+#### String
+```typescript
 let name: string = "Alice";
+```
 
-<!-- How to deal with bigint -->
+#### BigInt
+```typescript
 let largeNumber: bigint = 123456789012345678901234567890n;
+```
 
-<!-- How to deal with boolean -->
+#### Boolean
+```typescript
 let isActive: boolean = true;
+```
 
-<!-- How to deal with undefined -->
+#### Undefined
+```typescript
 let value: undefined;
+```
 
-<!-- How to deal with null -->
+#### Null
+```typescript
 let value: null = null;
+```
 
+### Type Inference
+TypeScript can infer the type of a variable based on the value assigned to it.
 
-<!-- Type Inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine the type of a variable based on the value assigned to it. This means that even if you don't explicitly specify a type, TypeScript can infer the most appropriate type and apply it. -->
-
+#### Example
+```typescript
 let age = 25;  // TypeScript infers that age is of type 'number'
 let name = "Alice";  // TypeScript infers that name is of type 'string'
+```
 
+### Explicit Type Annotations
+You can assign types explicitly.
 
-<!--  Explicit Type Annotations -->
-when we assigned type by our own
+### Limitations of Type Inference
+If a value is not initialized, TypeScript infers the type as `any`.
 
-<!-- Limitations of Type Inference -->
-any: if we don't initilize the value initially
-
-<!-- any -->
+#### Example
+```typescript
 let value: any = 42;
-Represents any type of value. When a variable has the any type, it can be assigned any value, and no type checking is done.
+```
 
+### Special Types
 
-<!-- unknown -->
-The any and unknown types in TypeScript are both used to represent values of any type.
+#### `any`
+Allows any type of value without type checking.
 
-The unknown type is safer than any because you cannot perform operations on an unknown value without first narrowing its type through type checks.
+#### `unknown`
+Safer than `any`; operations on `unknown` values require type checks.
 
+### Non-Primitive Data Types
 
-<!-- Non Primitive Data type -->
+#### Array
+```typescript
+let numbers: number[] = [2, 3, 4, 6];
+let mixed: (string | number)[] = [2, 3, 4, 5, 6, "Mohit"];
+```
 
-<!-- 1: Array -->
-let numbers: number[] = [2,3,4,6];
-let numbers:(string | number)[] = [2,3,4,5,6,"Mohit"];
+#### Tuples
+Fixed number of elements with specific types.
+```typescript
+let tuple: [string, number] = ["Rohit", 10];
+```
 
-<!-- 2: Tuples -->
-Tuples are arrays with a fixed number of elements of specific types.
+## Errors
 
-let tuple: [string, number] = ["Rohit",10];
+### Compile-Time Errors
+Detected during code compilation.
+- Examples:
+  - Syntax errors (e.g., missing semicolons).
+  - Type mismatches.
+  - Missing required variable initialization.
 
+### Runtime Errors
+Detected during program execution.
+- Examples:
+  - Dividing by zero.
+  - Accessing undefined variables or null references.
+  - Running out of memory.
 
+## Objects
 
-
-<!--  Compile-time refers to the phase when the source code is translated into machine code or an intermediate format (e.g., bytecode). This is done by a compiler. -->
-
-
-Errors detected at this phase are called compile-time errors.
-Examples of compile-time errors include:
-Syntax errors (e.g., missing semicolons).
-Type mismatches (e.g., assigning a string to a variable declared as a number in TypeScript).
-Variable declarations without initialization (if required by the language).
-
-
-
-<!-- Runtime refers to the phase when the program is executed after it has been compiled (or interpreted). -->
-
-<!-- Errors detected during this phase are called runtime errors.
-Examples of runtime errors include:
-Dividing by zero.
-Accessing undefined variables or null references.
-Running out of memory.
-Examples of Runtime Activities:
-
-Executing code instructions.
-Handling user inputs.
-Interacting with APIs or databases -->
-
-
-
-
-<!--  Objects -->
-
+### Inline Object
+```typescript
 let person: { name: string; age: number; isStudent: boolean };
 
 person = {
-    name: "rohit",
-    age:23,
+    name: "Rohit",
+    age: 23,
     isStudent: true
-}
-
-
-<!-- Inline -->
-let account: {name:string, balance:number, age?:number} = {
-    name:"Rohit",
-    balance:420
 };
+```
 
-<!-- Using Type Alises -->
-
-type student = {
+### Using Type Aliases
+```typescript
+type Student = {
    names: string,
    age: number
 };
 
-let College_student: student = {
-    names:"Rohit",
+let collegeStudent: Student = {
+    names: "Rohit",
     age: 20
 };
+```
 
-
-<!-- using interface -->
-
-
-interface customer {
-    name : string,
+### Using Interfaces
+```typescript
+interface Customer {
+    name: string,
     account_number: number,
     balance: number,
     age: number 
 }
 
-let per: customer = {
+let customer: Customer = {
     name: "Rohit",
-    account_number:230921,
-    balance:420,
+    account_number: 230921,
+    balance: 420,
     age: 12
+};
+```
+
+### Extending Interfaces
+```typescript
+interface Animal {
+    species: string;
 }
 
-<!-- extend with interface -->
+interface Pet extends Animal {
+    name: string;
+}
+```
 
-<!-- type uses intersections (&) to combine multiple types. -->
-
-type animal = gen & {
-
+### Declaration Merging
+Interfaces allow merging declarations.
+```typescript
+interface Person {
+    name: string;
 }
 
-
-<!--  Declaration Merging -->
-interface person {
-    name: string
+interface Person {
+    age: number;
 }
+```
+> Note: Declaration merging is not allowed with type aliases.
 
-interface person {
-    age: number
-}
+### Optional Properties
+Use `?` to define optional properties.
+```typescript
+let account: { name: string; balance: number; age?: number } = {
+    name: "Rohit",
+    balance: 420
+};
+```
 
-<!-- Above syntax is allowed -->
+### Nested Objects
+Objects can be nested as needed.
 
-But with type it is not allowed
+### Utility Types
+- `Partial<T>`: Makes all properties optional.
+- `Required<T>`: Makes all properties required.
+- `Readonly<T>`: Makes all properties read-only.
 
-<!-- ? optional keyword
- -->
+### Arrays of Objects
+```typescript
+let people: { name: string; age: number }[] = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 }
+];
+```
 
+## Functions
 
-<!-- Nested Objects -->
-
-
-<!-- Utility Types for Objects -->
-1: Partial<Person>
-2: Required<Person>
-3: Readonly<Person>
-
-<!-- Array of Objects -->
-
-
-<!-- Function in JS -->
-
-
+### Basic Function
+```typescript
 function greet(name: string): string {
     return `Hello, ${name}!`;
 }
+```
 
-<!-- Optional Parameters ?-->
-function meet(name?:string):void{
-    console.log(`Hello ${name||"Guest"}`);
+### Optional Parameters
+```typescript
+function meet(name?: string): void {
+    console.log(`Hello ${name || "Guest"}`);
 }
+```
 
-<!-- Default parameter -->
-
-
-
-
-
+### Default Parameters
+```typescript
+function welcome(name: string = "Guest"): void {
+    console.log(`Welcome, ${name}!`);
+}
