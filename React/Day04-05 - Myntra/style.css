@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.img-logo {
+  position: relative;
+  left: 5px;
+}
+
+.button-option, .profile-btn {
+  margin-right: 10px;
+  border: none;
+  font-size: 20px;
+  background-color: white;
+}
+
+.search {
+  width: 200px;
+  border: none;
+  padding: inherit;
+  position: relative;
+}
+
+.middle-card{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+

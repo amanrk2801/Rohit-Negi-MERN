@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.btn{
+    font-size: 20px;
+    border: none;
+    margin: 10px;
+}
+
+.first {
+  font-size: 20px;
+  text-align: center;
+}
