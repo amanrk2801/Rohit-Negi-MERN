@@ -1,0 +1,77 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+#heading {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#heading h1 {
+  font-size: 48px;
+  color: #333;
+  margin: 0;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cards {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.cards img {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cards a {
+  text-decoration: none;
+  color: #337ab7;
+  font-size: 18px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.search-bar input{
+    width: 30vw;
+}
