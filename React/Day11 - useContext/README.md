@@ -1,0 +1,3 @@
+**State Lifting**: A technique in React where the state is moved from a child component to a parent component to make it accessible to other components that need it.
+**Prop Drilling**: The process of passing props down manually to a nested child, often through intermediate components that do not need the prop.
+**useContext**: A React Hook that allows you to subscribe to React context without wrapping your component in a context consumer.

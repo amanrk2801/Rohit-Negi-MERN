@@ -1,0 +1,1 @@
+// useCallback internally uses Closure

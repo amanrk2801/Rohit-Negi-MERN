@@ -1,0 +1,2 @@
+- useMemo is used to remember previously calculated values
+- useRef holds the value but does not trigger a re-render
