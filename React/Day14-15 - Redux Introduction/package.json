@@ -1,0 +1,22 @@
+{
+  "name": "day14---redux-introduction",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.5.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  }
+}
